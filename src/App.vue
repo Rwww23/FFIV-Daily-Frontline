@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheCalendar from './components/TheCalendar.vue'
+import Countdown from './components/Countdown.vue'
+
+//todo: 距下次轮换时间 - DONE
+//todo：订阅日历
 
 </script>
 
@@ -9,9 +13,11 @@ import TheCalendar from './components/TheCalendar.vue'
     <div class="wrapper">
       <HelloWorld msg="今天战场打什么？" />
     </div>
+    <Countdown />
   </header>
 
   <main>
+
     <TheCalendar />
   </main>
 </template>
