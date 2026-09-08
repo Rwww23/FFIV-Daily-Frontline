@@ -19,7 +19,7 @@ const attrs = ref([
     },
     dates: new Date(),
     customData: {
-      //mapToday: getMapToday(day.date),
+      //mapToday: getMap(day.date),
     },
   },
 ])
@@ -35,12 +35,13 @@ const goToday = () => {
 
 
 <template>
-  <button @click="goToday">跳转到今天</button>
-  <VCalendar expanded :attributes="attrs" ref="calendar">
+  <button type = "button" class = "btn btn-outline-primary" @click="goToday">跳转当月</button>
+  <VCalendar expanded :attributes="attrs" ref="calendar" timezone="Asia/Shanghai">
     <template #day-content="{ day }">
       <div class="day-content">
         <div class="day-number">{{ day.day }}</div>
-        <div class="map-today">{{ getMap(day.date) }}</div>
+        <div class="map-today">    {{ console.log(day.date) }}
+    {{ console.log(getMap(day.date)) }}{{ getMap(day.date) }}</div> 
       </div>
     </template>
   </VCalendar>

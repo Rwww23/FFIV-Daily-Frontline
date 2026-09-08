@@ -1,8 +1,8 @@
 <template>
   <div class="countdown">
-    <h3>下次轮换：</h3>
-    <p>{{ timeLeft }}</p>
-    <h3>后</h3>
+    <span>下次轮换：</span>
+    <span>{{ timeLeft }}</span>
+    <span>后</span>
   </div>
 </template>
 
@@ -13,7 +13,6 @@ import { getCountdown } from '../utils/getCountdown';
 const timeNow = ref(new Date());
 setInterval(() => {
   timeNow.value = new Date();
-  //
 }, 1000);
 
 const timeLeft = computed(() => {
@@ -22,3 +21,10 @@ const timeLeft = computed(() => {
 });
 
 </script>
+
+<style scoped>
+.countdown {
+  display: flex;
+  flex-direction: row;
+}
+</style>

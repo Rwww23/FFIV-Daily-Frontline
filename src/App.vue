@@ -1,19 +1,24 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
 import TheCalendar from './components/TheCalendar.vue'
 import Countdown from './components/Countdown.vue'
+import Rotation from './components/Rotation.vue'
+import QuickGlance from './components/QuickGlance.vue'
 
 //todo: 距下次轮换时间 - DONE
-//todo：订阅日历
-
+//todo：订阅日历——这个发布后再做吧
+//todo：UI优化；设备适配
+//* ？为啥我VCalendar的高光与day和day-content文字对不上
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-      <HelloWorld msg="今天战场打什么？" />
+      <h1><QuickGlance /></h1>
     </div>
-    <Countdown />
+    <section>
+      <div><Rotation /></div>
+      <div><Countdown /></div>
+    </section>
   </header>
 
   <main>
