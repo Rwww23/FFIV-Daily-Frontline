@@ -8,7 +8,7 @@ import { ref } from 'vue'
 //todo：回到今天按钮 - DONE
 //todo：订阅（？怎么生成ics
 //todo：轮换时间倒计时 - DONE
-//todo：轮换序列显示（*服用enumerate？
+//todo：轮换序列显示（*复用enumerate？
 
 const attrs = ref([
   {
@@ -24,11 +24,10 @@ const attrs = ref([
   },
 ])
 
-const calendar = ref(null);
+const calendar = ref<any>(null);
 
 const goToday = () => {
-  calendar.value!.focusDate(new Date());
-  //move/focusdate?
+  calendar.value?.focusDate(new Date());
 }
 
 </script>
